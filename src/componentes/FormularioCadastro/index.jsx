@@ -57,7 +57,7 @@ export function FormularioCadastro() {
             type="text"
             placeholder="Digite seu nome completo"
             valor={nome}
-            aoAlterado={(valor) => setNome(valor)} // CORRIGIDO
+            aoAlterado={(valor) => setNome(valor)}
           />
         </div>
 
@@ -109,7 +109,18 @@ export function FormularioCadastro() {
           />
         </div>
 
+        <div className="form-grupo-checkbox">
+                    <input type="checkbox" id="termos" required />
+                    <Label htmlFor="termos">
+                        Eu li e concordo com os <a href="/termos">Termos de Serviço</a> e a <a href="/privacidade">Política de Privacidade</a>.
+                    </Label>
+                </div>
+
         <Botao>CRIAR MINHA CONTA</Botao>
+
+        <p className="form__link-login">
+                Já tem uma conta? <a href="/login">Faça Login</a>
+            </p>
       </form>
     </section>
   );
