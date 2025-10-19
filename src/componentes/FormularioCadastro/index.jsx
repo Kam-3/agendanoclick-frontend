@@ -14,7 +14,7 @@ export function FormularioCadastro() {
 
   const [tipoUsuario, setTipoUsuario] = useState("contratar");
 
-  const aoSalvar = (evento) => {
+  const aoSalvar = async (evento) => {
     evento.preventDefault();
 
     if (senha !== confirmarSenha) {
@@ -22,18 +22,59 @@ export function FormularioCadastro() {
       return;
     }
 
-    console.log("Formulário submetido =>", {
-      nome,
-      cpf,
-      email,
-      senha,
-      tipoUsuario,
-    });
-    alert(
-      `Conta do tipo "${tipoUsuario}" criada com sucesso! Verifique o console.`
-    );
-  };
+    let url = "";
+    let dadosParaEnviar = {};
 
+    if (tipoUsuario === "contratar") {
+      url = "/api/user/register";
+      dadosParaEnviar = {
+        name: nome,
+        cpf: cpf,
+        email: email,
+        password: senha,
+        // Adicione outros campos se o backend precisar, como phone_number
+      };
+    } else {
+      url = "/api/professional/register";
+      dadosParaEnviar = {
+        name: nome,
+        cpf_cnpj: cpf,
+        email: email,
+        password: senha,
+        // Adicione outros campos obrigatórios do backend, como category, bio, etc.
+      };
+    }
+
+    try {
+      const resposta = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dadosParaEnviar),
+      });
+
+      const dadosDaResposta = await resposta.json();
+
+      if (!resposta.ok) {
+        let mensagemDeErro = dadosDaResposta.message || "Ocorreu um erro.";
+        if (dadosDaResposta.errors) {
+          mensagemDeErro +=
+            `
+` +
+            Object.values(dadosDaResposta.errors).join(`
+`);
+        }
+        throw new Error(mensagemDeErro);
+      }
+
+      alert(dadosDaResposta.message || "Conta criada com sucesso!");
+      console.log("Resposta do servidor:", dadosDaResposta);
+    } catch (erro) {
+      console.error("Falha ao criar conta:", erro);
+      alert(`Erro ao criar conta: ${erro.message}`);
+    }
+  };
   return (
     <section className="coluna__form">
       <div className="header__form">
@@ -110,17 +151,18 @@ export function FormularioCadastro() {
         </div>
 
         <div className="form-grupo-checkbox">
-                    <input type="checkbox" id="termos" required />
-                    <Label htmlFor="termos">
-                        Eu li e concordo com os <a href="/termos">Termos de Serviço</a> e a <a href="/privacidade">Política de Privacidade</a>.
-                    </Label>
-                </div>
+          <input type="checkbox" id="termos" required />
+          <Label htmlFor="termos">
+            Eu li e concordo com os <a href="/termos">Termos de Serviço</a> e a{" "}
+            <a href="/privacidade">Política de Privacidade</a>.
+          </Label>
+        </div>
 
         <Botao>CRIAR MINHA CONTA</Botao>
 
         <p className="form__link-login">
-                Já tem uma conta? <a href="/login">Faça Login</a>
-            </p>
+          Já tem uma conta? <a href="/login">Faça Login</a>
+        </p>
       </form>
     </section>
   );
