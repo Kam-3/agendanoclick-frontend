@@ -1,0 +1,31 @@
+/* src/components/TipoUsuarioToggle/TipoUsuarioToggle.css */
+
+/* O container que dá a forma de pílula */
+.toggle-container {
+    display: flex;
+    border: 1.5px solid #0d6efd; /* Cor azul de exemplo (pode ser a sua cor principal) */
+    border-radius: 50px; /* Bordas bem arredondadas */
+    overflow: hidden; /* Garante que os botões não passem da borda arredondada */
+    width: 380px; /* Largura de exemplo, ajuste conforme necessário */
+    margin: 20px auto; /* Centraliza o container na página, se não estiver em um flex container */
+}
+
+/* Estilo para ambos os botões */
+.toggle-btn {
+    flex: 1; /* Faz com que ambos ocupem metade do espaço */
+    padding: 12px 10px;
+    border: none;
+    background-color: #ffffff; /* Fundo branco para o inativo */
+    color: #495057; /* Cor do texto cinza escuro para o inativo */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição suave para a mudança de cor */
+    outline: none; /* Remove o contorno azul ao clicar (opcional) */
+}
+
+/* Estilo para o botão ATIVO */
+.toggle-btn.active {
+    background-color: #0d6efd; /* Fundo azul */
+    color: #ffffff; /* Texto branco */
+}

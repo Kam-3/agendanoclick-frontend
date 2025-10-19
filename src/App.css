@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Certifique-se de que está a importar esta fonte no seu index.html */
+    background-color: #f3f4f6;
+}
+
+
+.App {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+

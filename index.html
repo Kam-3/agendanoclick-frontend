@@ -1,123 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agenda no Click</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/6.5.2/css/all.min.css">
-
-<link rel="stylesheet" href="./src/style.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>agenda-no-click</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<header class="cabecalho">
-<div class="cabecalho__usuario-info">
-<div class="cabecalho__avatar">
-<i class="fa-solid fa-user"></i>
-</div>
-<span>Olá, Cliente!</span>
-</div>
-<div class="cabecalho__barra-busca">
-<i class="fa-solid fa-magnifying-glass"></i>
-<input type="text" placeholder="Search">
-</div>
-<div class="cabecalho__acoes">
-<i class="fa-solid fa-bell"></i>
-<div class="cabecalho__avatar">
-<i class="fa-solid fa-user"></i>
-</div>
-</div>
-</header>
-
-<main class="container-principal">
-<section class="acoes-rapidas">
-<div class="acoes-rapidas__cartao">
-<i class="fa-solid fa-wrench acoes-rapidas__icone"></i>
-<span>Trabalhos contratados</span>
-</div>
-
-<div class="acoes-rapidas__cartao">
-<i class="fa-solid fa-star acoes-rapidas__icone"></i>
-<span>Avaliações de clientes</span>
-</div>
-<div class="acoes-rapidas__cartao">
-<i class="fa-solid fa-map-pin acoes-rapidas__icone"></i>
-<span>Ver Profissionais</span>
-</div>
-<div class="acoes-rapidas__cartao acoes-rapidas__cartao--financeiro">
-<div class="acoes-rapidas__financeiro-info">
-<span>Saldo Financeiro</span>
-<strong>0,00</strong>
-</div>
-<i class="fa-solid fa-dollar-sign acoes-rapidas__icone--cifrao"></i>
-</div>
-</section>
-
-<section class="calendario">
-<div class="calendario__cabecalho">
-<h3>Agosto 2024</h3>
-<div class="calendario__navegacao">
-<button>&lt;</button>
-<button>&gt;</button>
-</div>
-</div>
-<div class="calendario__grade">
-<div class="calendario__nome-dia">Dom</div>
-<div class="calendario__nome-dia">Seg</div>
-
-<div class="calendario__nome-dia">Ter</div>
-<div class="calendario__nome-dia">Qua</div>
-<div class="calendario__nome-dia">Qui</div>
-<div class="calendario__nome-dia">Sex</div>
-<div class="calendario__nome-dia">Sáb</div>
-<div class="calendario__dia">28</div>
-<div class="calendario__dia">29</div>
-<div class="calendario__dia">30</div>
-<div class="calendario__dia">31</div>
-<div class="calendario__dia calendario__dia--mes-atual">1</div>
-<div class="calendario__dia calendario__dia--mes-atual">2</div>
-<div class="calendario__dia calendario__dia--mes-atual">3</div>
-<div class="calendario__dia calendario__dia--mes-atual">4</div>
-<div class="calendario__dia calendario__dia--mes-atual">5</div>
-<div class="calendario__dia calendario__dia--mes-atual">6</div>
-<div class="calendario__dia calendario__dia--mes-atual">7</div>
-<div class="calendario__dia calendario__dia--mes-atual">8</div>
-<div class="calendario__dia calendario__dia--mes-atual calendario__dia--
-ativo">9</div>
-<div class="calendario__dia calendario__dia--mes-atual">10</div>
-<div class="calendario__dia calendario__dia--mes-atual">11</div>
-<div class="calendario__dia calendario__dia--mes-atual">12</div>
-<div class="calendario__dia calendario__dia--mes-atual">13</div>
-<div class="calendario__dia calendario__dia--mes-atual">14</div>
-<div class="calendario__dia calendario__dia--mes-atual">15</div>
-<div class="calendario__dia calendario__dia--mes-atual">16</div>
-<div class="calendario__dia calendario__dia--mes-atual">17</div>
-</div>
-
-</section>
-
-<section class="alertas">
-<h2 class="alertas__titulo">Alertas</h2>
-<div class="alertas__cartao">
-<p><strong>Prazo de término</strong>, realizado pelo profissional
-ANTONIO, com prazo para o dia
-31/10/2025.</p>
-<span>Adicionado para o dia 31/10/2025</span>
-</div>
-<div class="alertas__cartao">
-<p><strong>Prazo de término</strong>, realizado pelo profissional
-ANTONIO, com prazo para o dia
-31/10/2025.</p>
-<span>Adicionado para o dia 31/10/2025</span>
-</div>
-</section>
-
-</main>
-
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>

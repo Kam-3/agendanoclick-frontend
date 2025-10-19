@@ -1,0 +1,49 @@
+.coluna__form {
+    width: 100%;
+    padding: 4rem; /* AUMENTADO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header__form {
+    margin-bottom: 2rem; /* AUMENTADO */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.header__form img {
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+
+.header__form h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+
+.header__form p {
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+
+/* ========= RESPONSIVIDADE ========= */
+/* Mostra a coluna da esquerda apenas em ecrãs maiores que 1024px */
+@media (min-width: 1024px) {
+    .info-column {
+        display: flex;
+    }
+    .form-column {
+        width: 50%;
+    }
+}
+
+
