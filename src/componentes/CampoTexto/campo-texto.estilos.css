@@ -1,29 +1,22 @@
+/* Remova todo o conteúdo antigo e use este */
 .campo__texto {
-    margin: 1rem 0;
     width: 100%;
-}
-
-
-.campo__texto label {
-    display: inline-block;
-    margin-bottom: 8px;
+    background-color: #F9FAFB; /* Fundo cinza bem claro */
+    border: 1px solid #D1D5DB; /* Borda cinza */
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-sizing: border-box;
     font-size: 1rem;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
 }
 
-
-.campo__texto input {
-    width: 100%;
-    background-color: #FFF;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    box-sizing: border-box; /* Garante que padding não afete a largura */
+.campo__texto::placeholder {
+    color: #9CA3AF;
 }
 
-
-.campo__texto input:focus {
+.campo__texto:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #3b82f6;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
 }

@@ -1,72 +1,66 @@
 .coluna__esquerda {
-  /* Usamos flexbox para controlar o alinhamento dos itens internos */
   display: flex;
-  flex-direction: column; /* Organiza os itens em uma coluna (título, lista, etc) */
-  justify-content: center; /* Centraliza o conteúdo verticalmente se houver espaço */
-  
-  /* Valores aproximados do Figma */
-  padding: 40px; 
-  max-width: 550px; /* Define uma largura máxima para a coluna */
-  font-family: Arial, Helvetica, sans-serif; /* Use a fonte do seu projeto */
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
 }
 
-/* --- Título Principal --- */
 .coluna__esquerda h1 {
-  font-size: 48px; /* Tamanho grande para o título */
-  line-height: 1.2; /* Espaçamento entre as linhas */
-  margin-bottom: 30px; /* Espaço abaixo do título */
-  color: #1a202c; /* Cor escura para o texto */
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 0; 
+  color: #1a2c4b;
 }
 
-/* --- Lista de Funcionalidades --- */
+
+.conteudo-interativo {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+
 .lista__funcionalidades {
-  list-style: none; /* Remove as bolinhas da lista */
+  list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
 }
 
-/* --- Estilo Base para CADA Item da Lista (ativo ou não) --- */
 .item, .item-ativo {
-  display: flex; /* Alinha o ícone e o texto lado a lado */
-  align-items: center; /* Centraliza verticalmente o ícone e o texto */
-  padding: 16px 20px; /* Espaçamento interno */
-  margin-bottom: 12px; /* Espaço entre os itens */
-  border-radius: 12px; /* Bordas arredondadas */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável/interativo */
-  
-  /* Efeito suave de transição para o hover */
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  color: #4a5568; /* Cor de texto padrão */
+  color: #4a5568;
 }
 
-/* --- Efeito HOVER (quando o mouse passa por cima) para itens normais --- */
 .item:hover {
-  background-color: #e9efff; /* Um azul um pouco mais claro que o fundo geral */
+  background-color: #e0e8ff;
 }
 
-/* --- Estilo ESPECIAL para o Item ATIVO --- */
 .item-ativo {
-  background-color: #ffffff; /* Fundo branco, como no Figma */
-  color: #1a202c; /* Texto mais escuro para dar destaque */
-  font-weight: 600; /* Deixa a fonte um pouco mais forte */
-  
-  /* A sombra sutil que dá o efeito de elevação */
+  background-color: #ffffff;
+  color: #1a2c4b;
+  font-weight: 600;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Ícone dentro do item da lista --- */
 .icone {
-  width: 24px; /* Tamanho fixo para o ícone */
+  width: 24px;
   height: 24px;
-  margin-right: 16px; /* Espaço entre o ícone e o texto */
+  margin-right: 16px;
 }
 
-/* --- Div da Imagem Principal --- */
-/* Pela imagem do Figma, essa foto dos profissionais deveria ficar na
-   coluna da DIREITA. Se você a deixar aqui, ela vai quebrar o layout.
-   Por isso, a sugestão é escondê-la por enquanto com 'display: none'. */
- .imagem__profissionais {
-    position: absolute;
-    top: 20%;
-    left: 20rem;
+
+.imagem-funcionalidades {
+  flex-shrink: 0; 
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-top: -150px; */ 
 }

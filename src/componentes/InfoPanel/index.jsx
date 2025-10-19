@@ -3,6 +3,7 @@ import CheckCircleIcon from '/src/assets/Check circle.svg'
 import CreditCardIcon from '/src/assets/Credit card.svg'
 import CalendarIcon from '/src/assets/Calendar.svg'
 import StarIcon from '/src/assets/Star.svg'
+import imagemProfissionais from '../../assets/foto_profissionais.svg'
 import './info-panel.estilos.css'
 
 const funcionalidades = [
@@ -24,23 +25,32 @@ function Funcionalidade() {
         return <p>Funcionalidade não encontrada!</p>;
     }
 
+    // A única mudança é remover a div da imagem do final
     return (
         <div className="coluna__esquerda">
             <h1>Sua agenda <br />  de serviços a <br /> um clique de <br /> distância.</h1>
-            <ul className="lista__funcionalidades">
-                {funcionalidades.map((item) => (
-                    <li
-                        key={item.id}
-                        className={item.id === idAtivo ? 'item-ativo' : 'item'}
-                        onMouseEnter={() => setIdAtivo(item.id)}
-                    >
-                        <img src={item.imagemSrc} alt="" className="icone" />
-                        <span>{item.texto}</span>
-                    </li>
-                ))}
-            </ul>
-            <div className="imagem__profissionais">
-                <img src="src/assets/foto_profissionais.svg" alt="Profissionais de serviços" className="img__profissionais" />
+
+            {/* NOVO CONTAINER FLEXBOX */}
+            <div className="conteudo-interativo">
+                <ul className="lista__funcionalidades">
+                    {funcionalidades.map((item) => (
+                        <li
+                            key={item.id}
+                            className={item.id === idAtivo ? 'item-ativo' : 'item'}
+                            onMouseEnter={() => setIdAtivo(item.id)}
+                        >
+                            <img src={item.imagemSrc} alt="" className="icone" />
+                            <span>{item.texto}</span>
+                        </li>
+                    ))}
+                </ul>
+
+                {/* IMAGEM REINSERIDA AQUI, DENTRO DO NOVO CONTAINER */}
+                <img 
+                    src={imagemProfissionais} 
+                    alt="Profissionais de serviços" 
+                    className="imagem-funcionalidades" 
+                />
             </div>
         </div>
     );

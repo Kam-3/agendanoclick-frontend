@@ -1,8 +1,32 @@
 .pagina__cadastro {
     display: flex;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    overflow: hidden;
-    font-family: 'Inter', sans-serif; /* Garante a fonte correta */
+    background-color: #F0F5FF; /* O fundo azul claro do Figma aplicado ao card inteiro */
+}
+
+/* COLUNA DA ESQUERDA (AZUL) */
+.coluna-info {
+    flex: 1.1; /* Dá um pouco mais de espaço para esta coluna */
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* COLUNA DA DIREITA (BRANCA) */
+.coluna-form-container {
+    flex: 0.9; /* Um pouco menos de espaço para o formulário */
+    background-color: #ffffff; /* AQUI a mágica acontece: sobrepõe o azul com branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* IMAGEM DOS PROFISSIONAIS */
+/* .imagem-profissionais-principal {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 50%;
+    align-self: center;
 }
