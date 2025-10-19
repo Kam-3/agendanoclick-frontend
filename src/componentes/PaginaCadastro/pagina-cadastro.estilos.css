@@ -1,32 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .pagina__cadastro {
-    display: flex;
-    width: 100%;
-    background-color: #F0F5FF; /* O fundo azul claro do Figma aplicado ao card inteiro */
+  display: flex;
+  width: 100vw;
+  background-color: #007bff27;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 50vw;
 }
 
-/* COLUNA DA ESQUERDA (AZUL) */
-.coluna-info {
-    flex: 1.1; /* Dá um pouco mais de espaço para esta coluna */
-    padding: 3rem 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.coluna__info {
+  flex: 1.1;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* COLUNA DA DIREITA (BRANCA) */
-.coluna-form-container {
-    flex: 0.9; /* Um pouco menos de espaço para o formulário */
-    background-color: #ffffff; /* AQUI a mágica acontece: sobrepõe o azul com branco */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* IMAGEM DOS PROFISSIONAIS */
-/* .imagem-profissionais-principal {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 50%;
-    align-self: center;
+.coluna__container {
+  flex: 0.9;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }

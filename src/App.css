@@ -1,12 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6; /* Fundo cinza claro, como no Figma */
 }
 
 .App {
     display: flex;
-    justify-content: center; /* Centraliza o card horizontalmente */
-    align-items: center;   /* Centraliza o card verticalmente */
-    min-height: 100vh;
+    justify-content: center; 
+    align-items: center;  
+    max-height: 100vw;
 }
