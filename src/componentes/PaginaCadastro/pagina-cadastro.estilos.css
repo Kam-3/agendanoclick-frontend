@@ -29,3 +29,32 @@
   align-items: center;
   padding: 2rem;
 }
+
+
+
+@media (max-width: 768px) {
+
+    
+    .coluna__info {
+        display: none;
+        width: auto;
+    }
+
+    
+    .pagina__cadastro {
+        flex-direction: column; 
+        background-color: transparent; 
+        box-shadow: none;
+        min-height: auto; 
+        height: auto;
+    }
+
+
+    .coluna__form__container {
+        background-color: #ffffff; 
+    }
+
+    .coluna__container {
+      width: auto;
+    }
+}
