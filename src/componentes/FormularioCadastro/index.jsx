@@ -8,6 +8,7 @@ import "./formulario-cadastro.estilos.css";
 export function FormularioCadastro() {
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
@@ -32,7 +33,7 @@ export function FormularioCadastro() {
         cpf: cpf,
         email: email,
         password: senha,
-        // Adicione outros campos se o backend precisar, como phone_number
+        phone_number: telefone,
       };
     } else {
       url = "/api/professional/register";
@@ -111,6 +112,18 @@ export function FormularioCadastro() {
             placeholder="000.000.000-00"
             valor={cpf}
             aoAlterado={(valor) => setCpf(valor)}
+          />
+        </div>
+
+        <div className="form-grupo">
+          <Label htmlFor="telefone">Celular</Label>
+          <CampoTexto
+            id="telefone"
+            type="tel"
+            placeholder="(00) 90000-0000"
+            valor={telefone}
+            aoAlterado={(valor) => setTelefone(valor)}
+            obrigatorio={true}
           />
         </div>
 

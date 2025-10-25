@@ -70,5 +70,6 @@
   border-radius: 50%;
   object-fit: cover;
   margin-top: -150px;
+  position: relative; 
+  margin-left: 2em;
 }
-
